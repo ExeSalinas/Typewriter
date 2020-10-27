@@ -22,17 +22,24 @@ namespace Typewriter
     {
         private DispatcherTimer timer = new DispatcherTimer();
 
-        private string stringToDisplay = ;
+        //Sin Uso. Solo para test. Ahora Mando el parametro cuando se invoca al metodo 
+        private string stringToDisplay = "CADENA PRUEBA"  ;
 
         private Random rand;
 
+        //Property para el control de la velocidad
+        public int milisVelocidadTipeo { get; set; }
+
+        //Contador de letra.
         private int whichLetter = 0;
 
-        public Presentacion()
+        public Presentacion(int milis)
 
         {
 
+
             InitializeComponent();
+
 
             rand = new Random(System.DateTime.Now.Millisecond);
 
