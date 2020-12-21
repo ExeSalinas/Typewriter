@@ -15,7 +15,7 @@
             <ColumnDefinition Width="0.3*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="textBoxPrincipal" VerticalAlignment="Stretch" Margin="25" TextWrapping="Wrap" Width="408" SpellCheck.IsEnabled="True" Cursor="Hand"  AutomationProperties.HelpText="Ingrese Texto Aqui" AcceptsReturn="True" AcceptsTab="True" CharacterCasing="Lower"/>
+        <TextBox x:Name="textBoxPrincipal" VerticalAlignment="Stretch" Margin="25" TextWrapping="Wrap" Width="408" SpellCheck.IsEnabled="True" Cursor="Hand"  AutomationProperties.HelpText="Ingrese Texto Aqui" AcceptsReturn="True" AcceptsTab="True"/>
 
         
         <WrapPanel Grid.Column="1" Margin="20,20,20,400" >            

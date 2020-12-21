@@ -31,7 +31,7 @@ namespace Typewriter
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Presentacion pres = new Presentacion();
+            Presentacion pres = new Presentacion((int)SliderVelocidad.Value);
             pres.Show();
             pres.SetString(textBoxPrincipal.Text);
 

@@ -8,7 +8,7 @@
         Title="Typewriter Redit " Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox  x:Name="txtbSample"  TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="10,20,10,20" />
+        <TextBox  x:Name="txtbSample"  TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="10,20,10,20" TextChanged="TxtbSample_TextChanged" />
         
 
     </Grid>

@@ -43,7 +43,7 @@ namespace Typewriter
 
             rand = new Random(System.DateTime.Now.Millisecond);
 
-            this.timer.Interval = new TimeSpan(0, 0, 0, 0, ); //initially it will trigger at 200 milliseconds
+            this.timer.Interval = new TimeSpan(0, 0, 0, 0,milis ); //initially it will trigger at 200 milliseconds
 
             this.timer.Tick += new EventHandler(timerTick);
 
@@ -95,6 +95,9 @@ namespace Typewriter
 
         }
 
+        private void TxtbSample_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
+        }
     }
 }
