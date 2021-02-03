@@ -10,6 +10,7 @@
     <Grid Background="DarkSlateBlue">
         <!--<TextBox  x:Name="txtbSample"  TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="10,20,10,20" TextChanged="TxtbSample_TextChanged" />-->
         <TreeView HorizontalAlignment="Stretch" Margin="20,20,20,20"/>
+        <local:Box HorizontalAlignment="Left" Height="100" Margin="148,85,0,0"/>
 
 
     </Grid>

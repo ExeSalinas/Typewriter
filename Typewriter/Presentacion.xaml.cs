@@ -21,83 +21,33 @@ namespace Typewriter
     public partial class Presentacion : Window
     {
         private DispatcherTimer timer = new DispatcherTimer();
-
-        //Sin Uso. Solo para test. Ahora Mando el parametro cuando se invoca al metodo 
-        private string stringToDisplay = "CADENA PRUEBA"  ;
-
+        private string stringToDisplay ;
+        private List<string> stringList;
+        private int velocidad;
         private Random rand;
 
         //Property para el control de la velocidad
         public int milisVelocidadTipeo { get; set; }
 
-        //Contador de letra.
-        private int whichLetter = 0;
 
-        public Presentacion(int milis)
+        public Presentacion(int milis, string s )
 
         {
-
-
-            InitializeComponent();
-
-
-            rand = new Random(System.DateTime.Now.Millisecond);
-
-            this.timer.Interval = new TimeSpan(0, 0, 0, 0,milis ); //initially it will trigger at 200 milliseconds
-
-            this.timer.Tick += new EventHandler(timerTick);
-
-            
-
-        }
-
-        public void SetString(string s)
-
-        {
-
-            whichLetter = 0;
-
             this.stringToDisplay = s;
-
-            this.timer.Start();
+            this.velocidad = milis;
+            InitializeComponent();
+            SplitString();
 
         }
 
-        void timerTick(object sender, EventArgs e)
-
+        private List<string> SplitString()
         {
-
-            //Let's change the time that the following letter will last to appear (just to simulate not-synchronous-writing) 
-
-            this.timer.Stop();
-
-            this.timer.Interval = new TimeSpan(0, 0, 0, 0, rand.Next(0, 200)); //the following letter will appear in a period between the next 0 and 200 milliseconds.
-
-            if (whichLetter < this.stringToDisplay.Length)
-
-            {
-
-                AddFollowingLetter();
-
-                timer.Start();
-
-            }
+            stringList = stringToDisplay.Split('|').ToList();
+            return stringList;
 
         }
 
-        void AddFollowingLetter()
 
-        {
-            
-           txtbSample.Text += this.stringToDisplay.Substring(whichLetter, 1);
-
-            whichLetter++;
-
-        }
-
-        private void TxtbSample_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
     }
 }
